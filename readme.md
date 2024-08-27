@@ -9,7 +9,7 @@ Build a simple relational database schema to manage a movie database, and create
 </p>
 
 ## JavaScript Implementation
-[Click Here](./JavaScript/readme.md)
+[Click Here](./JavaScript)
 ## Python-Flask Implementation
 [Click Here](./Python/readme.md)
 
