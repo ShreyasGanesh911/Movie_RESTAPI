@@ -1,0 +1,54 @@
+-- MySQL dump 10.13  Distrib 8.0.34, for Win64 (x86_64)
+--
+-- Host: 127.0.0.1    Database: movie_10x
+-- ------------------------------------------------------
+-- Server version	8.0.35
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `movie_genre`
+--
+
+DROP TABLE IF EXISTS `movie_genre`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `movie_genre` (
+  `MovieID` int NOT NULL,
+  `GenID` int NOT NULL,
+  PRIMARY KEY (`MovieID`,`GenID`),
+  KEY `GenID` (`GenID`),
+  CONSTRAINT `movie_genre_ibfk_1` FOREIGN KEY (`MovieID`) REFERENCES `movie` (`MovieID`) ON UPDATE CASCADE,
+  CONSTRAINT `movie_genre_ibfk_2` FOREIGN KEY (`GenID`) REFERENCES `genre` (`GenID`) ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `movie_genre`
+--
+
+LOCK TABLES `movie_genre` WRITE;
+/*!40000 ALTER TABLE `movie_genre` DISABLE KEYS */;
+INSERT INTO `movie_genre` VALUES (501,1),(503,1),(504,1),(507,1),(508,1),(518,1),(519,1),(520,1),(521,1),(522,1),(525,1),(527,1),(528,1),(531,1),(534,1),(536,1),(538,1),(540,1),(540,2),(504,3),(506,3),(508,3),(509,3),(510,3),(512,3),(513,3),(514,3),(517,3),(518,3),(520,3),(521,3),(526,3),(527,3),(530,3),(532,3),(533,3),(536,3),(537,3),(539,3),(511,4),(515,4),(523,4),(528,4),(529,4),(535,4),(502,5),(507,5),(509,5),(510,5),(517,5),(526,5),(529,5),(530,5),(537,5),(538,5),(539,5),(505,6),(511,6),(514,6),(515,6),(519,6),(522,6),(523,6),(524,6),(525,6),(531,6),(532,6),(533,6),(535,6),(502,11),(505,11),(506,11),(513,11),(524,11),(534,11),(540,11),(512,13),(501,14),(503,14),(540,18);
+/*!40000 ALTER TABLE `movie_genre` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2024-08-28 13:55:48
