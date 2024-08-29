@@ -23,5 +23,3 @@ For table queries [Click here](./assets/CreateTable.sql)
 
 ## JavaScript Implementation
 [Click Here](./JavaScript)
-## Python-Flask Implementation
-[Click Here](./Python)
